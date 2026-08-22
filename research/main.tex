@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[style=apa, sorting=nyt]{biblatex}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\geometry{a4paper, margin=1in}
+\addbibresource{references.bib}
+
+\begin{document}
+
+% ---------- Cover page ----------
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+Swinburne University of Technology \\
+School of Science, Computing, and Emerging Technologies
+\vspace{8cm}
+
+COS40005 - Computing Technology Project A \\
+Project: UG\_COSEAT\_02 - Developing An AI tool for Automated Building Management System Functional Compliance Verification Using Large Language Models and Knowledge Graphs \\
+\vspace{1em}
+\textbf{Research Report} \\
+\textbf{Portfolio Task 1 (A)}
+\vfill
+
+Student name: Ngoc Van Nhi Do \\
+Student ID: 105551765 \\
+Submission date: [DON'T FORGET THISSSSSSSSSSSSSSSSSSSSSSSSSSSSSS]
+\end{center}
+\end{titlepage}
+
+% ---------- Header + footer ----------
+\pagestyle{fancy}
+\fancyhead[L]{Ngoc Van Nhi Do}
+\fancyhead[R]{105551765}
+\fancyfoot{}
+\renewcommand{\footrulewidth}{0.4pt} % default is 0pt
+\fancyfoot[L]{COS40005 - Computing Technology Project A}
+\fancyfoot[R]{\small\thepage}
+
+\tableofcontents
+\newpage
+
+\begin{center}
+\vspace*{2px}
+{\LARGE
+\setlength{\baselineskip}{2em}
+Title title
+}
+\end{center}
+
+\section{Business Domain}
+
+Building Management Systems (BMS) are systems which offer monitoring and control over electrical and mechanical services, such as heating, ventilation, and air conditioning (HVAC), lighting, energy systems, and others. They ensure energy efficiency by providing the automated and remote control of these operational infrastructure using real-time data garnered from environmental sensors. This allows systems to adjust their operations based on their current environment and prevents equipment from running when it is not needed. BMSs also improve occupant comfort by maintaining systems within predefined operational parameters, such as keeping the internal building temperature at a desired setpoint. 
+
+Although BMSs typically integrate a wide range of systems, this project focuses specifically on the interpretation and operation of HVAC systems. HVAC systems manage temperature, humidity, and indoor air quality in buildings, accounting for up to 50\% of a building's energy use \parencite{energygovau_hvac}. A BMS collects data from sensors built into an HVAC system and controls its parts such as fans, dampers, and heating or cooling systems. It operates according to predefined control sequences, which are step-by-step instructions on how each part of the system should respond under specific operating conditions. These sequences may specify setpoints, equipment start/stop conditions, control variables, and the positioning of components such as dampers and valves. They are derived from functional description documents, which are high-level descriptions of the intended operations of building systems. Together, these documents define the design intent of the HVAC system and how its components should operate. Consequently, they act as the basis for determining whether the system, once in operation, actually operates as intended, and whether the behaviour observed through BMS data is consistent with the original design.
+
+This process in which building systems are verified against the original project intent and operational standards is called commissioning. However, after the initial commissioning process, there is usually no automated method to verify that the building continues to comply with such specifications. An extensive study of 643 buildings and 100 million feet of floorspace uncovered more than 10,000 energy-related deficiencies due to the "almost inevitable drift" of existing buildings from their original design \parencite{mills2009}. Therefore, ongoing commissioning is needed for continuous verification. Current practices rely heavily on manually interpreting and comparing BMS trend data against functional descriptions and design documentation to ensure that observed system behaviour aligns with the project's technical specifications. This process is highly dependent on the expertise of experienced engineers and is therefore time-consuming, costly, inconsistent, and difficult to scale across large building portfolios \parencite{zibin2016}. In other words, there is a gap between the unstructured, natural-language descriptions of system intent written by engineers during design and the sensor logs generated during operation. Closing this gap would enable automated, continuous verification of buildling operation against its original design intent, improving energy efficiency and enabling earlier detection of faults during as the building continues to operate.
+
+Several commercial platforms have emerged to address building performance monitoring and fault detection at scale. Data analysis tools such as SkySpark or Honeywell Forge ingest real-time BMS trend data at scale and apply rule-based or machine learning analytics to detect equipment faults, energy waste, and anomalies across building portfolios \parencite{skyspark,honeywellforge}. Even though these platforms demonstrate clear efforts in reducing the manual effort required to monitor large volumes of BMS data, they still depend on manually configured rules derived by an engineer's interpretation of the design intent. While machine learning analytics can discover patterns between variables, they do not account for the inherent physical relations between the system components themselves. On the research side, ontologies have been developed to formalise commissioning knowledge and information exchange, representing domain concepts and their relationships in a machine-interpretable form to support more consistent commissioning practices \parencite{lee2019}. The BrickLLM Python library utilised Large Language Models (LLM) to extract information from natural-language descriptions and construct a machine-readable representation using Brick, an ontology for building equipment \parencite{perini2025,brick_ontology}.
+
+Despite these advances, a clear gap remains. Commercial platforms rely on manually configured rules, while research efforts such as ontology-based frameworks still require manual authoring of the rules or ontology mappings for each specific building, rather than deriving that knowledge automatically from the building's own documentation. This project therefore proposes and end-to-end pipeline that uses LLMs to extract design intent and sequences of operation from unstructured functional description documents and continuously verifies them against real BMS data.
+
+\section{End Users}
+
+The proposed AI-powered automated BMS compliance verification tool is primarily intended for professionals involved in the commissioning, operation and management of building systems. The main end users identified are commissioning engineers and facility managers. As these users have distinct responsibilities and operate with building systems in different ways, understanding their characteristics, needs, and preferences is crucial in designing the proposed system.
+
+Commissioning engineers are a primary end-user group because the proposed system is designed to support their role of compliance verification. ASHRAE (\citeyear{ashrae2019}) describes commissioning as a process that involves verifying and documenting whether a facility and its systems meet the owner's project requirements. The proposed framework aims to reduce the manual effort by automatically interpreting functional descriptions, equipment relationships and comparing against BMS trend data. For commissioning engineers, accuracy, traceability, and transparency are critical system requirements. The system should allow users to access the evidence supporting each compliance result, including the original functional description, the extracted control rule, relevant BMS trends, and the reasoning behind the identified deviation. This is particularly important because the framework relies on LLMs to interpret documentation, which can make mistakes or even "hallucinate." Consequently, engineers should be able to review the supporting evidence and override any incorrect interpretations. This also allows corrections made by experts to potentially improve the tool's future performance. On the same note, the system should minimise the need for engineers to manually upload large quantities of BMS data, as reducing time-consuming manual labour is a central goal of the project. Where possible, a continuous pipeline connecting live or regularly updated BMS data to the framework would allow commissioning engineers to focus their time on investigating deviations and making engineering decisions.
+
+Facility managers, particularly those working in operations management, are another important end-user group because they are responsible for the ongoing operation, maintenance, and performance of buildings. IBM identifies operations management within facilities management as being concerned with the management and maintenance of various systems including HVAC, stating that predictive and reactive maintenance as common strategies used by operations managers, with asset uptime and downtime serving as important performance indicators \parencite{flinders2026}. Although facility managers can have extensive technical and operational knowledge, their role is generally more focused on the practical side of operations than analysing the underlying control logic of individual HVAC systems. Consequently, they may not want to understand the processes used by the proposed semantic framework, such as LLM-based extraction, ontologies, RDF, or knowledge graphs. Instead, the system should abstract this complexity and present the results through a simple interface containing dashboards, compliance summaries, and clear explanations of detected deviations. This would allow facility managers to quickly assess the severity and potential impact of a deviation and determine whether further investigation or maintenance is required.
+
+Therefore, while both user groups require reliable compliance information, commissioning engineers tend to prioritise technical transparency and verification, whereas facility managers lean towards concise, actionable information to support day-to-day operational decision-making.
+
+\section{Solution Domain}
+
+The proposed system can be decomposed into four technical layers:
+
+\begin{description}[style=nextline]
+    \item[Document extraction] Extracting structured entities and control rules from a building's function description document provided in PDF format.
+    \item[Semantic modelling] Normalising the extracted information using an appropriate HVAC ontology to create a machine-readable semantic model.
+    \item[Knowledge presentation] Generating an RDF-based Knowledge Graph (KG) to represent the building's operational intent.
+    \item[Compliance verification] Mapping BMS trend data to the corresponding KG entities to assess compliance with expected operational behaviour and generate compliance reports based on the evidence found.
+\end{description}
+
+Each layer involves distinct technology requirements and therefore requires its own thorough evaluation to propose a unified, high-level architecture.
+
+\subsection{Document extraction}
+
+The project domain is primarily centered on HVAC and building systems; therefore, developing sufficient domain knowledge is essential so as to understand and validate the information that would be extracted by the proposed tool. This included familiarising with the fundamental concepts of HVAC and building management, as well as BMS technologies and how they support operational verification. 
+
+A significant challenge is presented as these functional description documents are largely unstructured and lack a standardised format. Furthermore, relevant information may be expressed across natural language, tables, diagrams, and graphs, making extraction a multimodal task. Therefore, this task requires the use of Optical Character Recognition (OCR), a technology which converts text contained within images or documents into machine-readable text. Modern OCR has evolved; it can identify headings, paragraphs, tables, figures, and document structure, which is what this project needs. Several document-processing platforms were considered, including both cloud-based platforms such as LlamaParse \parencite{llamaparse} and Reducto \parencite{reducto}, as well as open-source models such as Docling \parencite{docling}. The main preference were for a solution that is free, open-source, Python-compatable, and capable of preserving document structure. Docling, a processing toolkit developed by IBM, is the top candidate for this task because it provides a comprehensive document-processing framework with strong support for document structure. It can also run locally without any API costs, unlike commercial platforms which rely on usage-based pricing.
+
+While document parsing extracts the content and structure of a document, a Large Language Model (LLM) is required to interpret and derive meaning from the extracted information. The selection of a suitable LLM depends on several factors, including reasoning capabilities, accuracy, context window length, processing time, and whether the model can be deployed locally or not. The quality of the model is particularly important, as the system must accurately identify entities and relationships from the content. However, as the research team consists of students developing the system without dedicated funding, preference is given to models that can be run locally or at minimal cost. 
+
+\subsection{Semantic modelling}
+
+For machines to interpret, process, and reason about extracted information, it is necessary to represent that information using an ontology. An ontology provides a shared vocabulary and formal representation of knowledge, defining entities and their categories, attributes, instances, and relationships. This way, it provides meaning and structure to data, making it machine-readable. 
+
+For building-related applications, the Brick Schema is an ontology for representing building entities and their relationships \parencite{balaji2016}. Other existing ontologies can complement Brick by representing other aspects of building systems, such as CTRLont for describing control logic \parencite{schneider2017}, or FDD\_ON which focuses on concepts related to fault and diagnostics (FDD) \parencite{chen2026}. Recent research has extended the Brick ontology with CTRLont to represent both building entities and their control rules, although the resulting ontology was manually constructed, whereas this project aims to automate this process \parencite{li2026}. Retrieval-Augmented Generation (RAG) provides a suitable approach for addressing this challenge. Rather than solely relying on the language model's parametric knowledge, the system can retrieve the relevant class labels, definitions, and relationships so that the model's outputs are constrained to valid ontology concepts.
+
+Ultimately, human oversight remains important. The final stage of this process should therefore incorporate a human-in-the-loop validation mechanism, allowing domain experts to verify that the extracted entities and control rules are semantically correct and accurate reflect the underlying design intent.
+
+\subsection{Knowledge presentation}
+
+Once entities and control rules have been extracted and mapped to the relevant ontologies, a representation is required to store the resulting building model. The relationships between buildlings are inherently graph-shaped; equipment may be associated with points, points with actuators or sensors, and equipment with the spaces or systems into which they feed. A knowledge graph therefore provides a suitable representation for capturing these entities and their relations. 
+
+Knowledge graphs can be implemented using a range of graph representation languages; however, an Resource Description Framework-based (RDF) approach is particularly suitable for this project because the previously mentioned ontologies are written in RDF \parencite{balaji2016,schneider2017,chen2026}. This reduces the need for an intermediate transition layer between the extracted building model and the knowledge representation layer. RDF-based technologies also provide mechanisms for both reasoning and validation. If RDF provides the underlying graph data model, RDF Schema (RDFS) and the Web Ontology Language (OWL) built on top of RDF to provide more expressive semantic and reasoning. RDFS and OWL entailment can be used to derive implicit relationships and classifications from the ontology, while the Shapes Constraint Language (SHACL) provides a standard mechanism for validating RDF graphs \parencite{knublauch2017}. The resulting knowledge graph can incorporate both the expected buildling model and actual observed data. By representing these together, the system can use the relationships and rules embedded within to reason about the observed state and identify any potential faults within the building system.
+
+\subsection{Compliance verification}
+
+Another important justification for adopting a knowledge graph-based approach is that the proposed system is intended to support knowledge-based reasoning rather than relying on pattern recognition from historical data. Data-driven approaches, including machine learning and multivariate statistical analysis methods applied to BMS data, can effectively detect faults; however, the challenge lies in the lack of interpretability of such approaches. It can be difficult for engineers to understand the model inference mechanism as there is often a lack of transparency behind a certain detection or diagnosis result \parencite{chen2023}. In contrast, a knowledge graph provides an explicit basis for reasoning about observed system behaviour. Once real BMS data is incorporated into the graph, the observed state can be compared against the encoded control rules, meaning it is possible to trace why a potential fault was detected. The LLM can subsequently use these results to generate a natural-language report, using the underlying rules, observations, and relationships as supporting evidence. This allows a human supervisor to trace the reported detection back to the specific data and reasoning that led to the conclusion.
+
+\section{KOST Analysis}
+Present a mapping of knowledge, skill and technology requirements of the selected
+architecture design to what you have as a final year student. Clearly indicate any gap that
+may exist and a plan to overcome it. Students may need to discuss potential gaps (individual
+limitations) with their team and see if the team can help overcome them.
+
+\section{Ethical Considerations}
+
+Review relevant ethical protocols and standards that need to be adhered to for the
+particular problem you are solving. (e.g. ethical considerations for health data collection, AI
+implementation). The Australian Privacy Principles can be a good starting point. You should
+also review some Australian and international Acts related to your area. This section can be
+enriched with a table to indicate what protocols apply to your project and how you propose
+to ensure the protocols are followed.
+
+Table below provides a brief overview of the main domain entities that will be encountered throughout this project.
+
+\begin{table}[ht]
+\centering
+\caption{Key HVAC Concepts and Terminology} 
+\label{tab:hvac_concepts}
+\vspace{2pt}
+\def\arraystretch{1.5}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Term} & \textbf{Description} \\
+\hline
+AHU & Air Handling Unit; conditions and circulates air thorughout a building \\
+\hline
+VAV & Variable Air Volume; varies the air supply from the AHU to meeting heating and cooling needs \\
+\hline
+Chiller & Produces chilled water for cooling \\
+\hline
+Refrigerant & Fluid used to absorb heat from one area and release it in another \\
+\hline
+Condenser & Collects the heat from the refrigerant and releases it outside \\
+\hline
+Valve & Controls the flow of water/refrigerant in HVAC systems \\
+\hline
+Fan & Moves air through the ventilation system \\
+\hline
+Damper & Consists of rotating sheets of metal to control airflow \\
+\hline
+Sensor & Measures metrics such as temperate, pressure, or humidity \\
+\hline
+Actuator & Physically changes a system component based on a control command \\
+\hline
+Set point & Desired value of a variable that a system attempts to maintain, such as a desired internal temperature \\
+\hline
+\end{tabular}
+\end{table}
+
+% References
+\printbibliography
+\end{document}
