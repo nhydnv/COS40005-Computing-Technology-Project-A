@@ -6,6 +6,8 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{float}
+\usepackage{longtable}
 
 \geometry{a4paper, margin=1in}
 \addbibresource{references.bib}
@@ -116,10 +118,42 @@ Knowledge graphs can be implemented using a range of graph representation langua
 Another important justification for adopting a knowledge graph-based approach is that the proposed system is intended to support knowledge-based reasoning rather than relying on pattern recognition from historical data. Data-driven approaches, including machine learning and multivariate statistical analysis methods applied to BMS data, can effectively detect faults; however, the challenge lies in the lack of interpretability of such approaches. It can be difficult for engineers to understand the model inference mechanism as there is often a lack of transparency behind a certain detection or diagnosis result \parencite{chen2023}. In contrast, a knowledge graph provides an explicit basis for reasoning about observed system behaviour. Once real BMS data is incorporated into the graph, the observed state can be compared against the encoded control rules, meaning it is possible to trace why a potential fault was detected. The LLM can subsequently use these results to generate a natural-language report, using the underlying rules, observations, and relationships as supporting evidence. This allows a human supervisor to trace the reported detection back to the specific data and reasoning that led to the conclusion.
 
 \section{KOST Analysis}
-Present a mapping of knowledge, skill and technology requirements of the selected
-architecture design to what you have as a final year student. Clearly indicate any gap that
-may exist and a plan to overcome it. Students may need to discuss potential gaps (individual
-limitations) with their team and see if the team can help overcome them.
+
+Table~\ref{tab:kost_analysis} below presents a mapping of the knowledge, skill, and technology requirements of the proposed architectural design to my current capabilities as a final-year student. Existing gaps are identified along with proposed plans for overcoming them.
+
+\vspace{-1em}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{2cm}|p{2.5cm}|p{2.5cm}|p{3cm}|p{4cm}|}
+\caption{KOST Analysis}
+\label{tab:kost_analysis} \\
+\hline
+\textbf{KOST Area} & \textbf{Requirement} & \textbf{Current capability} & \textbf{Gap identified} & \textbf{Plan to overcome gap} \\
+\hline
+\endfirsthead
+
+\hline
+\endlastfoot
+
+Knowledge & Building and HVAC systems & No prior knowledge & Needs training on fundamental HVAC concepts & I plan to research on the fundamental HVAC concepts, familiarise myself with the basic terminology, and learn how HVAC systems work via online articles and Youtube videos. \\
+\hline
+Knowledge & Semantic modelling and knowledge representation & No prior knowledge & Needs introduction to semantic web technologies and formal knowledge representation & Crash-coursing myself on these concepts, particularly RDF, RDFS, OWL, SHACL, Brick Schema, and researching on how their use cases. \\
+\hline
+Knowledge & LLM-powered agents & Knowledge on agentic AI pipelines, basic LLM-assisted workflows, and RAG concepts & Not much experience in implementing actual LLM-powered systems & I plan on doing deeper research on LLM-based pipelines and experimenting with local LLM models. \\
+\hline
+Skill & Interpreting functional description documents & Zero experience & No experience in understanding functional descriptions due to lack of knowledge regarding HVAC systems & After teaching myself the fundamentals of HVAC, I plan to go through the sample document of the Latelab building provided by the project client. This would help me understand what a functional description document looks like and how typical control logic is written. \\
+\hline
+Skill & Python programming & Fairly proficient, especially with data processing and AI-related tasks & Minimal experience working with the libraries and APIs that were previously suggested & Looking up documentation and code examples available online. \\
+\hline
+Skill & Reading and understanding ontology code & Zero experience & No previous exposure to ontology code & Reading online tutorials and documentation \\
+\hline
+Technology & LLM for extracting control rules from functional description documents & Free, local models & Local models might not have the best performance compared to paid cloud-based APIs in regards to output quality and response times. However, since there is presumably no funding for this project, access to a cloud-based provider is deemed unrealistic. & The team plans on experimenting with various publicly available local models, prioritising the implementation of the system functionality before accuracy. \\
+\hline
+Technology & Computing resources & Laptop with 16GB RAM & Additional RAM and potentially a dedicated GPU might be required to support serious experimentation with more capable local models alongside the knowledge graph, RAG pipeline, and other project components & Other members in the team may own machines with greater RAM or GPU capacity to run the work. \\
+\hline
+
+\end{longtable}
 
 \section{Ethical Considerations}
 
