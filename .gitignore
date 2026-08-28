@@ -12,3 +12,7 @@
 *.txt
 
 roadmap.md
+test.ttl
+
+.venv/
+experiments/
