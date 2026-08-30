@@ -10,7 +10,6 @@ import os
 import json
 import sys
 import argparse
-from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -99,7 +98,7 @@ PROVIDERS = {
 def extract_from_section(section: dict, provider: str) -> dict:
     """Call the LLM for a single section. Returns a dict with the parsed
     entities plus the section's traceability metadata, or an error entry
-    if parsing/generation failed."""
+    if parsing failed."""
     
     prompt = build_prompt(section)
     call_fn = PROVIDERS[provider]
@@ -134,8 +133,8 @@ def extract_from_section(section: dict, provider: str) -> dict:
  
 def extract_all(sections: list, provider: str, only_tables: bool = True) -> list:
     """Run extraction across all sections. By default, skips pure-prose
-    sections that are unlikely to contain tabular entities -- flip
-    only_tables=False if entities can also appear in narrative text."""
+    sections that are unlikely to contain tabular entities. Flip
+    only_tables=False if entities can also appear in prose."""
     results = []
     for section in sections:
         if only_tables and section.get("content_type") not in ("table", "table_html"):

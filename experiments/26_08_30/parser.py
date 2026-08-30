@@ -10,7 +10,7 @@ Each section includes:
     - source           : {"page_no": ..., "doc_name": ...} for traceability
 
 Usage:
-    python parser.py docs/air_conditioning.pdf > output.json
+    python parser.py ../docs/air_conditioning.pdf > output.json
 """
 
 import re
