@@ -9,10 +9,10 @@
 *.run.xml
 *.synctex.gz
 *.toc
-*.txt
 
 roadmap.md
 test.ttl
+notes.txt
 
 .venv/
-experiments/
+.env

@@ -1,0 +1,67 @@
+It appears you have provided a detailed specification for a Building Management System (BMS) and its integration with various systems within a university building. Here's a breakdown of the key points:
+
+**General Information**
+
+* The BMS is responsible for managing and controlling various systems within the building, including ventilation, heating, cooling, and lighting.
+* The system operates in conjunction with various building management systems (BMS) and interfaces to manage and monitor the building's systems.
+
+**Zone Temperature Control**
+
+* The system allows for the control of zone temperature, which is set by the BMS based on the desired temperature setpoint.
+* The system is designed to maintain the zone temperature within a specified range (20°C to 24°C) to prevent excessive temperature fluctuations.
+
+**Zone Temperature Setpoints**
+
+* The system allows for the setting of individual zone temperature setpoints with adjustable deadbands.
+* The deadband is a safety feature that prevents the system from operating outside the desired temperature range.
+
+**Control Strategy**
+
+* The system uses an operation mode-based control strategy to determine which zone temperature setpoint to set based on the current thermal conditions in the building.
+* The system is designed to adapt to changing conditions, such as occupancy and ambient temperatures.
+
+**Occupancy Control**
+
+* The system monitors occupancy levels and adjusts the thermal conditions to maintain a desired occupancy level.
+* The system allows for the aggregation of occupancy counts from various sensors, including XOVIS people counting sensors.
+
+**Outdoor Unit (CU) Integration**
+
+* The system integrates with an outdoor unit (condensing unit) that serves all associated indoor units.
+* The system controls the outdoor unit based on the BMS's control strategy.
+
+**Controller Failure/Alarms**
+
+* The system monitors the local controller's status and reports any failures or alarms to the BMS.
+* The system ensures that there are no false alarms raised due to controller failures.
+
+**Fire Mode**
+
+* The system is designed to prevent false alarms in the event of a facility General Fire Alarm (GFA) being received directly from the facility.
+* The system takes steps to ensure that the fire mode operation is only initiated in the event of a legitimate alarm.
+
+**Trend and Data Logging**
+
+* The system logs trend and data on various parameters, including unit enable, unit status, unit fault, zone temperature, and floor occupancy.
+* The system provides visual and log reports on these parameters to the BMS.
+
+**Ceiling Cassette Units**
+
+* The system integrates with ceiling cassette units (AC) that serve the level 1 and 4 comms rooms in the building.
+* The system controls these units via a high-level interface from the Daikin gateway at Level 4.
+
+**Points List (for each cassette unit)**
+
+* The system provides a points list that includes various parameters, such as unit enable, unit status, unit fault, zone temperature, and floor occupancy.
+
+**Start/Stop Control**
+
+* The system allows for the control of AC units based on the zone temperature setpoint.
+* The system is designed to adapt to changing conditions and ensures that the AC unit is enabled or disabled accordingly.
+
+**Temperature Control**
+
+* The system controls the AC unit based on the zone temperature, with the ability to override the control through the BMS front-end.
+* The system provides a safe and controlled operation of the AC unit.
+
+Overall, the system appears to be designed to provide a robust and reliable control of various building systems, with features such as zone temperature control, occupancy monitoring, and fault reporting.
