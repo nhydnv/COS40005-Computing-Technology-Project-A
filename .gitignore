@@ -17,4 +17,5 @@ main.pdf
 tmp/
 
 .venv/
-.env
+.env__pycache__/
+*.pyc
