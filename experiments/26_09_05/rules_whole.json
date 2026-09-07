@@ -1,0 +1,159 @@
+[
+    {
+        "rule_id": "R1",
+        "description": "Enable a VRV zone when the current time is equal to or later than the scheduled start time and the floor occupancy status is active, or when the zone is manually overridden ON via the BMS front\u2011end",
+        "independent_variables": [
+            "time of day >= scheduled start time",
+            "floor occupancy status active",
+            "override ON flag"
+        ],
+        "dependent_variables": [
+            "VRV zone enabled"
+        ],
+        "section_id": "1.1.6"
+    },
+    {
+        "rule_id": "R2",
+        "description": "Disable a VRV zone when the current time is equal to or later than the scheduled stop time and 25 minutes have passed after the floor occupancy status became inactive, or when the zone is manually overridden OFF via the BMS front\u2011end",
+        "independent_variables": [
+            "time of day >= scheduled stop time",
+            "25 minutes after floor occupancy deactivated",
+            "override OFF flag"
+        ],
+        "dependent_variables": [
+            "VRV zone disabled"
+        ],
+        "section_id": "1.1.6"
+    },
+    {
+        "rule_id": "R3",
+        "description": "Set the FCU zone temperature to a fixed setpoint of 22.5\u202f\u00b0C when the floor occupancy status is ON and either the people count exceeds 5 or the caf\u00e9 window is open",
+        "independent_variables": [
+            "floor occupancy status ON",
+            "people count > 5",
+            "caf\u00e9 window open"
+        ],
+        "dependent_variables": [
+            "FCU zone temperature set to 22.5\u202f\u00b0C"
+        ],
+        "section_id": "1.1.7"
+    },
+    {
+        "rule_id": "R4",
+        "description": "Allow the FCU zone temperature to float within the range 20\u202f\u00b0C\u201124\u202f\u00b0C under all other conditions",
+        "independent_variables": [
+            "floor occupancy status OFF or (people count \u2264 5 and caf\u00e9 window closed)"
+        ],
+        "dependent_variables": [
+            "FCU zone temperature allowed to drift between 20\u202f\u00b0C and 24\u202f\u00b0C"
+        ],
+        "section_id": "1.1.7"
+    },
+    {
+        "rule_id": "R5",
+        "description": "Start a warm\u2011up cycle by fully opening the outside\u2011air damper when ambient temperature is below 20\u202f\u00b0C, average indoor temperature is more than 2\u202f\u00b0C above ambient, and the zone is calling for heating; revert damper to minimum position once zone temperature reaches 22\u202f\u00b0C",
+        "independent_variables": [
+            "ambient temperature < 20\u202f\u00b0C",
+            "average indoor temperature > ambient + 2\u202f\u00b0C",
+            "zone calling for heating"
+        ],
+        "dependent_variables": [
+            "outside\u2011air damper fully open (warm\u2011up)",
+            "damper returns to minimum when zone temperature = 22\u202f\u00b0C"
+        ],
+        "section_id": "1.1.8"
+    },
+    {
+        "rule_id": "R6",
+        "description": "Start a cool\u2011down cycle by fully opening the outside\u2011air damper when ambient temperature is above 16\u202f\u00b0C, average indoor temperature is more than 2\u202f\u00b0C below ambient, and the zone is calling for cooling; revert damper to minimum position once zone temperature reaches 22\u202f\u00b0C",
+        "independent_variables": [
+            "ambient temperature > 16\u202f\u00b0C",
+            "average indoor temperature < ambient - 2\u202f\u00b0C",
+            "zone calling for cooling"
+        ],
+        "dependent_variables": [
+            "outside\u2011air damper fully open (cool\u2011down)",
+            "damper returns to minimum when zone temperature = 22\u202f\u00b0C"
+        ],
+        "section_id": "1.1.9"
+    },
+    {
+        "rule_id": "R7",
+        "description": "Modulate the outside\u2011air damper position based on zone CO\u2082 concentration: keep damper at minimum until CO\u2082 reaches 600\u202fppm, then open proportionally up to maximum at 800\u202fppm",
+        "independent_variables": [
+            "zone CO\u2082 concentration"
+        ],
+        "dependent_variables": [
+            "outside\u2011air damper position (minimum until 600\u202fppm, proportional up to maximum at \u2265800\u202fppm)"
+        ],
+        "section_id": "1.1.10"
+    },
+    {
+        "rule_id": "R8",
+        "description": "Activate heating mode when zone temperature is lower than the setpoint by more than the deadband",
+        "independent_variables": [
+            "zone temperature < setpoint - deadband"
+        ],
+        "dependent_variables": [
+            "heating mode activated"
+        ],
+        "section_id": "1.1.11"
+    },
+    {
+        "rule_id": "R9",
+        "description": "Activate cooling mode when zone temperature is higher than the setpoint by more than the deadband",
+        "independent_variables": [
+            "zone temperature > setpoint + deadband"
+        ],
+        "dependent_variables": [
+            "cooling mode activated"
+        ],
+        "section_id": "1.1.11"
+    },
+    {
+        "rule_id": "R10",
+        "description": "Enable an AC unit when zone temperature exceeds 28\u202f\u00b0C or when manually overridden ON via the BMS front\u2011end",
+        "independent_variables": [
+            "zone temperature > 28\u202f\u00b0C",
+            "override ON flag"
+        ],
+        "dependent_variables": [
+            "AC unit enabled"
+        ],
+        "section_id": "1.2.4"
+    },
+    {
+        "rule_id": "R11",
+        "description": "Disable an AC unit when zone temperature falls below 28\u202f\u00b0C or when manually overridden OFF via the BMS front\u2011end",
+        "independent_variables": [
+            "zone temperature < 28\u202f\u00b0C",
+            "override OFF flag"
+        ],
+        "dependent_variables": [
+            "AC unit disabled"
+        ],
+        "section_id": "1.2.4"
+    },
+    {
+        "rule_id": "R12",
+        "description": "Generate a BMS alarm when a fault signal is received via the Daikin gateway",
+        "independent_variables": [
+            "fault signal received via Daikin gateway"
+        ],
+        "dependent_variables": [
+            "BMS alarm generated"
+        ],
+        "section_id": "1.1.15"
+    },
+    {
+        "rule_id": "R13",
+        "description": "Generate a BMS alarm when the caf\u00e9 window is opened or kept open after the scheduled operating hours",
+        "independent_variables": [
+            "caf\u00e9 window opened after set hours"
+        ],
+        "dependent_variables": [
+            "BMS alarm generated"
+        ],
+        "section_id": "1.1.15"
+    }
+]

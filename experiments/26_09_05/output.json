@@ -1,0 +1,435 @@
+[
+    {
+        "section_id": "auto-1",
+        "heading_path": [],
+        "heading_text": "",
+        "content_type": "prose",
+        "content": "FUNCTIONAL DESCRIPTION",
+        "source": {
+            "page_no": [
+                1
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.1",
+        "heading_path": [
+            "System Overview"
+        ],
+        "heading_text": "System Overview",
+        "content_type": "prose",
+        "content": "The  BMS  monitors  and  controls  20-off  Variable  Refrigerant  Volume  (VRV)  units  which  serve  Swinburne Universities UN building's 'late lab' via Daikin BACnet gateway (provided by others), communicating with each individual VRV unit through high-level interface (HLI). Each VRV will have an associated outdoor unit to provide the appropriate heating and cooling to the specified zones. These VRV units will operate in conjunction with energy  recovery  ventilators  to  provide  air  comfort  and  fresh  air  control  in  addition  to  heating  and  cooling requirements. VRVs will be grouped in their respective zones (floors) and be controlled as zones as opposed to individual VRVs.",
+        "source": {
+            "page_no": [
+                1
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.2",
+        "heading_path": [
+            "Gateway Devices"
+        ],
+        "heading_text": "Gateway Devices",
+        "content_type": "table",
+        "content": "| DESCRIPTION    |   DEVICE INSTANCE | IP ADDRESS   | SUBNET MASK   | LOCATION                                    |\n|----------------|-------------------|--------------|---------------|---------------------------------------------|\n| Daikin Gateway |              7200 | 172.22.33.13 | 255.255.255.0 | MSSB-L4 (Level 4 Mechanical Services Riser) |\n| Abakus Server  |             10101 | 172.22.33.16 | 255.255.255.0 | Level 3 DDC Panel Location                  |",
+        "source": {
+            "page_no": [
+                1
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.3",
+        "heading_path": [
+            "Controlled Equipment"
+        ],
+        "heading_text": "Controlled Equipment",
+        "content_type": "table",
+        "content": "| UNIT           | ASSOCI ATED OUTDOOR UNIT   | MODE L/ SE RIES   | LOCATION         | CO MMENT   |\n|----------------|----------------------------|-------------------|------------------|------------|\n| Level 1        | Level 1                    | Level 1           | Level 1          | Level 1    |\n| H-LL-FCU-L1.W1 | H-LL-CU-1.1                | FXMQ/REY          | Student Lounge   |            |\n| H-LL-FCU-L1.N1 | H-LL-CU-1.1                | FXMQ/REY          | Student Lounge   |            |\n| H-LL-FCU-L1.N2 | H-LL-CU-1.1                | FXMQ/REY          | Student Lounge   |            |\n| H-LL-FCU-L1.I1 | H-LL-CU-1.1                | FXMQ/REY          | Student Lounge   |            |\n| H-LL-FCU-L1.I2 | H-LL-CU-1.1                | FXMQ/REY          | Informal Seating |            |\n| Level 2        | Level 2                    | Level 2           | Level 2          | Level 2    |",
+        "source": {
+            "page_no": [
+                1
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.3",
+        "heading_path": [
+            "Controlled Equipment"
+        ],
+        "heading_text": "Controlled Equipment",
+        "content_type": "table",
+        "content": "| UNIT           | ASSOCI ATED OUTDOOR UNIT   | MODE L/ SE RIES   | LOCATION          | CO MMENT   |\n|----------------|----------------------------|-------------------|-------------------|------------|\n| H-LL-FCU-L2.W1 |                            | FXMQ/REY          | Student Work Zone |            |\n| H-LL-FCU-L2.N1 |                            | FXMQ/REY          | Student Work Zone |            |\n| H-LL-FCU-L2.N3 |                            | FXMQ/REY          | Project Booth     |            |\n| H-LL-FCU-L2.I1 | H-LL-CU-2.1                | FXMQ/REY          | Student Work Zone |            |\n| H-LL-FCU-L2.I2 |                            | FXMQ/REY          | Student Work Zone |            |\n| H-LL-FCU-L2.P1 |                            | FXMQ/REY          | Project Room      |            |\n| H-LL-FCU-L2.P2 |                            | FXMQ/REY          | Project Room      |            |\n| Level 3        | Level 3                    | Level 3           | Level 3           | Level 3    |\n| H-LL-FCU-L3.W1 | H-LL-CU-3.1                | FXMQ/REY          | Student Kitchen   |            |\n| H-LL-FCU-L3.N1 | H-LL-CU-3.1                | FXMQ/REY          | Student Kitchen   |            |\n| H-LL-FCU-L3.E1 | H-LL-CU-3.1                | FXMQ/REY          | Student Kitchen   |            |\n| H-LL-FCU-L3.I1 | H-LL-CU-3.1                | FXMQ/REY          | Student Kitchen   |            |\n| LEVEL 4        | LEVEL 4                    | LEVEL 4           | LEVEL 4           | LEVEL 4    |\n| H-LL-FCU-L4.N1 | H-LL-CU-4.1                | FXMQ/REY          | Event Space       |            |\n| H-LL-FCU-L4.I1 | H-LL-CU-4.1                | FXMQ/REY          | Event Space       |            |\n| H-LL-FCU-L4.W1 | H-LL-CU-4.1                | FXMQ/REY          | Event Space       |            |\n| H-LL-FCU-L4.E1 | H-LL-CU-4.1                | FXMQ/REY          | Event Space       |            |",
+        "source": {
+            "page_no": [
+                1
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.4",
+        "heading_path": [
+            "Points List (for each VRV unit)"
+        ],
+        "heading_text": "Points List (for each VRV unit)",
+        "content_type": "table",
+        "content": "| POINTS                 | BI   | AI   | BO   | AO   | MO   |   HLI | CO MMENTS          |\n|------------------------|------|------|------|------|------|-------|--------------------|\n| Unit Enable            |      |      |      |      |      |     1 | Via Daikin Gateway |\n| Unit Status            |      |      |      |      |      |     1 | Via Daikin Gateway |\n| Unit Fault             |      |      |      |      |      |     1 | Via Daikin Gateway |\n| Operation Mode Setting |      |      |      |      |      |     1 | Via Daikin Gateway |\n| Operation Mode Status  |      |      |      |      |      |     1 | Via Daikin Gateway |",
+        "source": {
+            "page_no": [
+                2
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.4",
+        "heading_path": [
+            "Points List (for each VRV unit)"
+        ],
+        "heading_text": "Points List (for each VRV unit)",
+        "content_type": "table",
+        "content": "| POINTS                        | BI      | AI      | BO      | AO      | MO      | HLI     | CO MMENTS                                                                                      |\n|-------------------------------|---------|---------|---------|---------|---------|---------|------------------------------------------------------------------------------------------------|\n| Zone Temperature              |         | 1       |         |         |         |         | 0-10V Active Output Signal (Belimo 22-RTM-19-1)                                                |\n| Airflow Command               |         |         |         |         |         | 1       | Via Daikin Gateway                                                                             |\n| Airflow Rate                  |         |         |         |         |         | 1       | Via Daikin Gateway                                                                             |\n| Supply Air Temperature Sensor |         | 1       |         |         |         |         | 10K Type II Duct Mounted Temperature Sensor (Belimo 01DT-1LL)                                  |\n| Return Air Temperature Sensor |         | 1       |         |         |         |         | 10K Type II Duct Mounted Temperature Sensor (Belimo 01DT-1LL)                                  |\n| CO2 Sensor                    |         | 1       |         |         |         |         | 0-10V Active Output Signal (Belimo 22-RTM-19-1)                                                |\n| Outside Air Damper Actuator   |         |         |         | 1       |         |         | 0-10V Modulating Damper Actuator                                                               |\n| Level 1                       | Level 1 | Level 1 | Level 1 | Level 1 | Level 1 | Level 1 | Level 1                                                                                        |\n| Window Open Status            |         | 1       |         |         |         |         | Via window reed switches on Level 1 Caf\u00e9 windows                                               |\n| Roof                          | Roof    | Roof    | Roof    | Roof    | Roof    | Roof    | Roof                                                                                           |\n| Outside Air Temperature       |         | 1       |         |         |         |         | 10 Type II Wall Mounted Outdoor Temperature Sensor (Belimo 01UT-1L) (Mounted on H-LL-ERV-LR.1) |",
+        "source": {
+            "page_no": [
+                2
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.5",
+        "heading_path": [
+            "Points List [People Counting System]"
+        ],
+        "heading_text": "Points List [People Counting System]",
+        "content_type": "table",
+        "content": "| POINTS                    |   BI |   AI | BO   | AO   | MO   | HLI   | CO MMENTS          |\n|---------------------------|------|------|------|------|------|-------|--------------------|\n| Sensor In                 |      |    1 |      |      |      |       | Via Abakus Gateway |\n| Sensor Out                |      |    1 |      |      |      |       | Via Abakus Gateway |\n| Sensor Status             |    1 |      |      |      |      |       | Via Abakus Gateway |\n| Floor Occupancy           |      |    1 |      |      |      |       | Via Abakus Gateway |\n| Building Occupancy        |      |    1 |      |      |      |       | Via Abakus Gateway |\n| Floor Occupancy Status    |    1 |      |      |      |      |       | Via Abakus Gateway |\n| Building Occupancy Status |    1 |      |      |      |      |       | Via Abakus Gateway |",
+        "source": {
+            "page_no": [
+                3
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.6",
+        "heading_path": [
+            "Start/Stop Control"
+        ],
+        "heading_text": "Start/Stop Control",
+        "content_type": "prose",
+        "content": "An VRV zone will be enabled when any of the following conditions are met:\n\nThe time of the day is equal or past the units scheduled start time (initially set to 00:00-23:59 ~ 24 hours)\n\nAND\n\nThe floor's occupancy status is active (determined via occupancy status from the lighting interface gateway)\n\nOR\n\nOverridden ON via BMS front-end.\n\nAn VRV zone will be disabled when any of the following conditions are met:\n\nThe time of the day is equal to or past the units scheduled stop time (initially set to 00:00-23:59 ~ 24 hours)\n\nAND\n\n25  mins  (adj.)  after  the floor's occupancy  has  been  deactivated  (determined  via  occupancy  status from the lighting interface gateway)\n\nOR\n\nOverridden OFF via BMS front-end.\n\nNotes:\n\nAlthough the 'late lab' will operate 24/7, the schedule is be programmed such that if there are any planned shut downs, the university could lockout the VRV operation via the BMS.",
+        "source": {
+            "page_no": [
+                3
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.7",
+        "heading_path": [
+            "Temperature Control (Via People Counting System)"
+        ],
+        "heading_text": "Temperature Control (Via People Counting System)",
+        "content_type": "prose",
+        "content": "The FCU zone temperature control will operate in two modes: fixed setpoint control and floating temperature control, based on occupancy and window status conditions. The system will monitor the Abakus People Counter, Caf\u00e9 window status, and floor occupancy status (as provided by the lighting control system).\n\nWhen the floor occupancy status is ON, and either the Abakus People Count exceeds the adjustable setpoint of 5 people OR the Caf\u00e9 window status is open, the FCU zone temperature will be controlled to a fixed setpoint of 22.5\u00b0C. This ensures consistent comfort conditions during periods of higher occupancy or when external air is introduced into the space.\n\nIn all other conditions, the FCU zone temperature will revert to a floating control strategy, maintaining the zone temperature within the defined limits of 20\u00b0C (heating threshold) and 24\u00b0C (cooling threshold). Within this range, no  active  heating  or  cooling  will  be  applied,  allowing  the  space  temperature  to  drift  for  improved  energy efficiency.",
+        "source": {
+            "page_no": [
+                4
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.8",
+        "heading_path": [
+            "Warm Up Cycle"
+        ],
+        "heading_text": "Warm Up Cycle",
+        "content_type": "prose",
+        "content": "As  part  of  an  optimised  start  control,  each  VRV  unit  shall  utilise  the  control  of  their  respective  outside  air motorised damper to provide a warm up cycle based on the average indoor space temperature (on the respective floor) and ambient temperatures.\n\nThe following conditions needs to be satisfied before warm-up cycle is allowed to run:\n\nAmbient temperature is below 20\u00b0C (adjustable)\n\nWhen the average indoor space temperature is greater than 2\u00b0C (adj.) above the ambient temperature\n\nThe zone/floor is calling for heating\n\nOnce all the above conditions are satisfied, the motorised outside air damper of the VRV unit will fully open. When each respective zone reaches 22\u00b0C (adj.), then that VRV unit will revert to its minimum outside air damper position and controls will revert to normal operation based on CO2 control (see section 1.1.9 CO2 Control)",
+        "source": {
+            "page_no": [
+                4
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.9",
+        "heading_path": [
+            "Cool Down Cycle"
+        ],
+        "heading_text": "Cool Down Cycle",
+        "content_type": "prose",
+        "content": "Like the 'Warm Up Cycle,' each VRV unit shall utilise the control of their respective outside air motorised damper to provide a cool down cycle based on the average indoor space temperature and ambient temperatures.\n\nSwinburne University UN Building -Revision: H\n\nAmbient temperature is above 16\u00b0C (adjustable)\n\nWhen the average indoor space temperature is less than 2\u00b0C (adj.) below the ambient temperature\n\nThe zone/floor is calling for cooling\n\nOnce all the above conditions are satisfied, the motorised outside air damper of the VRV unit will fully open. When each respective zone reaches 22\u00b0C (adj.), then that VRV unit will revert to its minimum outside air damper position and controls will revert to normal operation based on CO2 control (see section 1.1.9 CO2 Control)",
+        "source": {
+            "page_no": [
+                4
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.10",
+        "heading_path": [
+            "CO2 Control"
+        ],
+        "heading_text": "CO2 Control",
+        "content_type": "prose",
+        "content": "In 'normal operation' the  BMS  will  modulate  each  VRV  zone  outside  air  damper  to  control  zone  CO2.  The outside air damper will be a its minimum outside air damper position until the zone CO2 reaches its minimum setpoint of 600 ppm (adj.) and will open proportionally to a maximum outside air damper position when the zone CO2 is equal to or greater than 800 ppm (adj.).\n\nFig. 1.1.9 Sample CO2 Damper Control. In this example, the minimum outside air damper position is commissioned at 40% open and the maximum outside air damper position at 80% open. Both parameters are adjustable on the BMS as required",
+        "source": {
+            "page_no": [
+                5
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.11",
+        "heading_path": [
+            "Temperature Control"
+        ],
+        "heading_text": "Temperature Control",
+        "content_type": "prose",
+        "content": "The temperature control for the 'Late Lab' building will be done in VRV grouped zones (as opposed to individual VRV control ~ i.e., average zone temperature for the entire floor is controlled by all associated VRVs). Each zone will  have  a  desired  zone  temperature  setpoint  with  adjustable  deadband  (initially  set  to  1.5\u00b0C  (adj.)).  The operation mode will be determined by the zone temperature with respect to the zone temperature  setpoint. Each zone will have a desired temperature setpoint with an adjustable deadband; however, in line with client requirements, the control strategy will maintain the zone temperature within a defined range of 20\u00b0C to 24\u00b0C , allowing the temperature to float within this band under normal operating conditions.\n\nOperation mode is set to heating when the zone temperature is below the zone temperature setpoint by more than the dead band. Likewise, operation mode is set to cooling when the zone temperature is above the zone temperature setpoint by more than the dead band.  The temperature setpoint will be either fixed or variable depending on the current thermal conditions called for (see Section 1.1.11 Occupied Mode Control)\n\nFig. 1.1.11 Variable Setpoint Control\n\nNote -The zone temperature set point will scale linearly with building outside air temperature with both high and low temperature setpoint limits. The above shows an example of how zone temperature setpoint will vary.",
+        "source": {
+            "page_no": [
+                6
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.12",
+        "heading_path": [
+            "VRV Outdoor Unit (CU) Integration"
+        ],
+        "heading_text": "VRV Outdoor Unit (CU) Integration",
+        "content_type": "prose",
+        "content": "The VRV outdoor unit (condensing unit) serves all associated indoor units and is responsible for refrigerant flow, capacity control, and system mode operation. The CU is controlled by the manufacturer's proprietary controller (Daikin) and is not directly controlled by the BMS. The BMS provides control of indoor unit setpoints and operating conditions, which in turn generate load demand that the CU responds to accordingly.",
+        "source": {
+            "page_no": [
+                7
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.13",
+        "heading_path": [
+            "Occupied Mode Control"
+        ],
+        "heading_text": "Occupied Mode Control",
+        "content_type": "prose",
+        "content": "There are 14 XOVIS people counting sensors placed at entry and exit points on each floor of the building and for each floor, the associated sensors' In Count and Out Count is aggregated.\n\nThe Occupancy is calculated as below:\n\nTotal Floor In Count - Total Floor Out Count = Floor Occupancy\n\nThe 'total floor in count' will be used to adjust the thermal condition setpoints depending on the amount of people recorded to be in the floor. Specific details are as follows:",
+        "source": {
+            "page_no": [
+                7
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.13",
+        "heading_path": [
+            "Occupied Mode Control"
+        ],
+        "heading_text": "Occupied Mode Control",
+        "content_type": "table",
+        "content": "| Operation Mode (For Individual floors)                                                                          | Floor Occupancy from Lighting System   | HVAC Status   | Abakus People Count   | Thermal Conditions Type   | Thermal Conditions description                                                                                                      |\n|-----------------------------------------------------------------------------------------------------------------|----------------------------------------|---------------|-----------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------|\n| All hours                                                                                                       | ON                                     | ON            | >5                    | Narrow                    | Fixed setpoint of 22.5\u00b0C (adj.) with a deadband of 1.5\u00b0C (adj.)                                                                     |\n| All hours                                                                                                       | ON                                     |               | \u2264 5                   | Wide                      | Variable setpoint of 19\u00b0C to 25\u00b0C (adj.) with a fixed deadband of 1.5\u00b0C (adj.) depending on ambient air temperatures.               |\n| All hours                                                                                                       | OFF                                    | OFF           | NA                    | AC OFF                    | NA                                                                                                                                  |\n| All hours (Caf\u00e9 Window Open, Level 1 only). Note: caf\u00e9 operator to open/close window/ as per licence agreement. | ON                                     | ON            | NA (any number)       | Wide                      | Level 1 only: Variable setpoint of 19\u00b0C to 25\u00b0C (adj.) with a fixed deadband of 1.5\u00b0C (adj.) depending on ambient air temperatures. |",
+        "source": {
+            "page_no": [
+                7
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.14",
+        "heading_path": [
+            "Trend  and  Data  Logging"
+        ],
+        "heading_text": "Trend  and  Data  Logging",
+        "content_type": "prose",
+        "content": "The BMS is monitoring and performing trend and data logging every 15 minutes. The following trend logs are visible and logged on the BMS:\n\nUnit Enable\n\nUnit Status\n\nUnit Fault\n\nSupply Air Temperature\n\nReturn Air Temperature\n\nZone Temperature Setpoint\n\nZone Temperature\n\nFloor Occupancy\n\nSwinburne University UN Building\n\n-\n\nBuilding Occupancy\n\nFloor Occupancy Status\n\nBuilding Occupancy Status\n\nLate Labs",
+        "source": {
+            "page_no": [
+                7
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.15",
+        "heading_path": [
+            "Controller Failure / Alarms"
+        ],
+        "heading_text": "Controller Failure / Alarms",
+        "content_type": "prose",
+        "content": "In the event of power loss to the local controller, the VRV unit will stop operation; once power is reinstated,  the unit will commence operation in sequence (so long as the start/stop conditions are met) after a delayed time.\n\nAn alarm is generated when any of the following conditions are met after a delayed period:\n\nA fault signal is sent via Daikin gateway to the BMS.\n\nA BMS alarm will be raised when the caf\u00e9 window is opened/kept open after the set hours",
+        "source": {
+            "page_no": [
+                9
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.1.16",
+        "heading_path": [
+            "Fire  Mode"
+        ],
+        "heading_text": "Fire  Mode",
+        "content_type": "prose",
+        "content": "Typically, fire mode occurs when the MSSB receives a facility General Fire Alarm (GFA) directly from the facility. Fire  Indication  Panel  (FIP)  and  on  receipt  of  a  GFA,  the  VRV  units  should  be  disabled  directly  at  the corresponding MSSB. As this is hardwired to the unit, the BMS should have no control over this operation and will only monitor and mimic the fire mode operation to ensure that no false BMS alarms are raised.",
+        "source": {
+            "page_no": [
+                9
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.1",
+        "heading_path": [
+            "System Overview"
+        ],
+        "heading_text": "System Overview",
+        "content_type": "prose",
+        "content": "The BMS monitors and controls 2-off Ceiling Cassette Units (AC) which serve the level 1 and 4 comms rooms in the Swinburne Universities UN building's 'late lab'. These units are Daikin cassette units which will be controlled via high-level interface from the Daikin gateway at Level 4. These AC units operate as the second stage of cooling in the comms room when the temperature exceeds 28\u00b0C.",
+        "source": {
+            "page_no": [
+                9
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.2",
+        "heading_path": [
+            "Controlled Equipment"
+        ],
+        "heading_text": "Controlled Equipment",
+        "content_type": "table",
+        "content": "| UNIT         | ASSOCI ATED OUTDOOR UNIT   | MODE L/ SE RIES   | LOCATION   | CO MMENT   |\n|--------------|----------------------------|-------------------|------------|------------|\n| Level 1      | Level 1                    | Level 1           | Level 1    | Level 1    |\n| H-LL-AC-L1.2 | H-LL-CU-1.2                | FCA/RZA           | Comms Room |            |\n| Level 4      | Level 4                    | Level 4           | Level 4    | Level 4    |\n| H-LL-AC-L4.2 | H-LL-CU-4.2                | FCA/RZA           | Comms Room |            |",
+        "source": {
+            "page_no": [
+                9
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.3",
+        "heading_path": [
+            "Points List (for each cassette unit)"
+        ],
+        "heading_text": "Points List (for each cassette unit)",
+        "content_type": "table",
+        "content": "| POINTS      | BI   | AI   | BO   | AO   |   HLI | CO MMENTS                 |\n|-------------|------|------|------|------|-------|---------------------------|\n| Unit Enable |      |      |      |      |     1 | Via Daikin BACnet gateway |\n| Unit Status |      |      |      |      |     1 |                           |\n| Unit Fault  |      |      |      |      |     1 |                           |",
+        "source": {
+            "page_no": [
+                9
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.3",
+        "heading_path": [
+            "Points List (for each cassette unit)"
+        ],
+        "heading_text": "Points List (for each cassette unit)",
+        "content_type": "table",
+        "content": "| POINTS                  | BI   |   AI | BO   | AO   | HLI   | CO MMENTS                                                |\n|-------------------------|------|------|------|------|-------|----------------------------------------------------------|\n| Zone Temperature Sensor |      |    1 |      |      |       | Wall mounted 10K type II Thermistor (Alerton TS-1050-BT) |",
+        "source": {
+            "page_no": [
+                9
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.4",
+        "heading_path": [
+            "Start/Stop Control"
+        ],
+        "heading_text": "Start/Stop Control",
+        "content_type": "prose",
+        "content": "An AC will be enabled when any of the following conditions are met:\n\nThe zone temperature exceeds 28\u00b0C (adj.)\n\nOR\n\nOverridden ON via BMS front-end.\n\nAn AC will be disabled when any of the following conditions are met:\n\nThe zone temperature is below 28\u00b0C (adj.)\n\nOR\n\nOverridden OFF via BMS front-end.",
+        "source": {
+            "page_no": [
+                10
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.5",
+        "heading_path": [
+            "Temperature Control"
+        ],
+        "heading_text": "Temperature Control",
+        "content_type": "prose",
+        "content": "The AC unit will be controlled via its proprietary Daikin controller utilising the wall mounted control panel within each comms room. The BMS will only enable the unit and monitor the rooms zone temperature, run status and unit fault.",
+        "source": {
+            "page_no": [
+                10
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.6",
+        "heading_path": [
+            "Trend  and  Data  Logging"
+        ],
+        "heading_text": "Trend  and  Data  Logging",
+        "content_type": "prose",
+        "content": "The BS is monitoring and performing trend and data logging every 15 minutes. The following trend logs are visible and logged on the BMS:\n\nUnit Enable\n\nUnit Status\n\nUnit Fault\n\nZone Temperature",
+        "source": {
+            "page_no": [
+                10
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.7",
+        "heading_path": [
+            "Controller Failure / Alarms"
+        ],
+        "heading_text": "Controller Failure / Alarms",
+        "content_type": "prose",
+        "content": "In the event of power loss to the local controller, the AC unit will stop operation; once power is reinstated, the unit will commence operation in sequence (so long as the start/stop conditions are met) after a delayed time.\n\nAn alarm is generated when any of the following conditions are met after a delayed period:\n\nThere is a mismatch between the AC commanded value and actual value (determined from interface card).\n\nThe BMS receives a fault signal directly from the interface card.\n\nThe zone temperature exceeds 35\u00b0C (adj.) for a period of 5 minutes (adj.).",
+        "source": {
+            "page_no": [
+                10
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    },
+    {
+        "section_id": "1.2.8",
+        "heading_path": [
+            "Fire  Mode"
+        ],
+        "heading_text": "Fire  Mode",
+        "content_type": "prose",
+        "content": "Typically, fire mode occurs when the MSSB receives a facility General Fire Alarm (GFA) directly from the facility. Fire Indication Panel (FIP) and on receipt of a GFA, the cassette units should be disabled directly at the corresponding MSSB. As this is hardwired to the unit, the BMS should have no control over this operation and will only monitor and mimic the fire mode operation to ensure that no false alarms are raised.",
+        "source": {
+            "page_no": [
+                10
+            ],
+            "doc_name": "air_conditioning.pdf"
+        }
+    }
+]
