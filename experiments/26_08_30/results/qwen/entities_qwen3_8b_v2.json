@@ -1,0 +1,332 @@
+[
+  {
+    "unit_id": "Daikin Gateway",
+    "location": "MSSB-L4 (Level 4 Mechanical Services Riser)",
+    "comment": "Gateway Devices",
+    "_section_id": "1.1.2",
+    "_heading_path": [
+      "Gateway Devices"
+    ]
+  },
+  {
+    "unit_id": "Abakus Server",
+    "location": "Level 3 DDC Panel Location",
+    "comment": "Gateway Devices",
+    "_section_id": "1.1.2",
+    "_heading_path": [
+      "Gateway Devices"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.W1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.N1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.N3",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.I1",
+    "associated_outdoor_unit": "H-LL-CU-2.1",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.I2",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.P1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.P2",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.W1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 3",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.N1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 3",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.E1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 3",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.I1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 3",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.N1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 4",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.I1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 4",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.W1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 4",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.E1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 4",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-CU-2.1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 2",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-CU-3.1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 3",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-CU-4.1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Level 4",
+    "comment": "",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "Supply Air Temperature Sensor",
+    "model_series": "Belimo 01DT-1LL",
+    "location": "Duct Mounted",
+    "comment": "10K Type II Duct Mounted Temperature Sensor (Belimo 01DT-1LL)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Return Air Temperature Sensor",
+    "model_series": "Belimo 01DT-1LL",
+    "location": "Duct Mounted",
+    "comment": "10K Type II Duct Mounted Temperature Sensor (Belimo 01DT-1LL)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "CO2 Sensor",
+    "model_series": "Belimo 22-RTM-19-1",
+    "location": "Unknown",
+    "comment": "0-10V Active Output Signal (Belimo 22-RTM-19-1)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Outside Air Damper Actuator",
+    "model_series": "Belimo 0-10V Modulating Damper Actuator",
+    "location": "Unknown",
+    "comment": "0-10V Modulating Damper Actuator",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Outside Air Temperature Sensor",
+    "model_series": "Belimo 01UT-1L",
+    "location": "Wall Mounted",
+    "comment": "10 Type II Wall Mounted Outdoor Temperature Sensor (Belimo 01UT-1L) (Mounted on H-LL-ERV-LR.1)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Sensor In",
+    "model_series": "Sensor",
+    "location": "Via Abakus Gateway",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "Sensor Out",
+    "model_series": "Sensor",
+    "location": "Via Abakus Gateway",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "Sensor Status",
+    "model_series": "Sensor",
+    "location": "Via Abakus Gateway",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "Abakus Gateway",
+    "model_series": "Gateway",
+    "location": "System Communication",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "H-LL-AC-L1.2",
+    "associated_outdoor_unit": "H-LL-CU-1.2",
+    "model_series": "FCA/RZA",
+    "location": "Comms Room",
+    "_section_id": "1.2.2",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-AC-L4.2",
+    "associated_outdoor_unit": "H-LL-CU-4.2",
+    "model_series": "FCA/RZA",
+    "location": "Comms Room",
+    "_section_id": "1.2.2",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "Zone Temperature Sensor",
+    "comment": "Wall mounted 10K type II Thermistor (Alerton TS-1050-BT)",
+    "_section_id": "1.2.3",
+    "_heading_path": [
+      "Points List (for each cassette unit)"
+    ]
+  }
+]

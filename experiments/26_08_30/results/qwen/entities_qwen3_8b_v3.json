@@ -1,0 +1,317 @@
+[
+  {
+    "unit_id": "C7200",
+    "model_series": "Daikin Gateway",
+    "location": "MSSB-L4 (Level 4 Mechanical Services Riser)",
+    "comment": "",
+    "_section_id": "1.1.2",
+    "_heading_path": [
+      "Gateway Devices"
+    ]
+  },
+  {
+    "unit_id": "C10101",
+    "model_series": "Abakus Server",
+    "location": "Level 3 DDC Panel Location",
+    "_section_id": "1.1.2",
+    "_heading_path": [
+      "Gateway Devices"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.W1",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.N1",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.N2",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.I1",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.I2",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Informal Seating",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.W1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Student Work Zone",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.N1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Student Work Zone",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.N3",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Project Booth",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.I1",
+    "associated_outdoor_unit": "H-LL-CU-2.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Work Zone",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.I2",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Student Work Zone",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.P1",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Project Room",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.P2",
+    "associated_outdoor_unit": "",
+    "model_series": "FXMQ/REY",
+    "location": "Project Room",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.W1",
+    "associated_outdoor_unit": "H-LL-CU-3.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Kitchen",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.N1",
+    "associated_outdoor_unit": "H-LL-CU-3.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Kitchen",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.E1",
+    "associated_outdoor_unit": "H-LEL-CU-3.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Kitchen",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L3.I1",
+    "associated_outdoor_unit": "H-LL-CU-3.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Kitchen",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.N1",
+    "associated_outdoor_unit": "H-LL-CU-4.1",
+    "model_series": "FXMQ/REY",
+    "location": "Event Space",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.I1",
+    "associated_outdoor_unit": "H-LL-CU-4.1",
+    "model_series": "FXMQ/REY",
+    "location": "Event Space",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.W1",
+    "associated_outdoor_unit": "H-LL-CU-4.1",
+    "model_series": "FXMQ/REY",
+    "location": "Event Space",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L4.E1",
+    "associated_outdoor_unit": "H-LL-CU-4.1",
+    "model_series": "FXMQ/REY",
+    "location": "Event Space",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "Belimo 22-RTM-19-1",
+    "location": "",
+    "comment": "0-10V Active Output Signal (Belimo 22-RTM-19-1)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Daikin Gateway",
+    "location": "",
+    "comment": "Via Daikin Gateway",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Belimo 01DT-1LL",
+    "location": "",
+    "comment": "10K Type II Duct Mounted Temperature Sensor (Belimo 01DT-1LL)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "H-LL-ERV-LR.1",
+    "location": "",
+    "comment": "10 Type II Wall Mounted Outdoor Temperature Sensor (Belimo 01UT-1L) (Mounted on H-LL-ERV-LR.1)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "SENSOR_IN",
+    "model_series": "",
+    "location": "",
+    "comment": "Via Abakus Gateway",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "SENSOR_OUT",
+    "model_series": "",
+    "location": "",
+    "comment": "Via Abakus Gateway",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "ABAKUS_GATEWAY",
+    "model_series": "",
+    "location": "",
+    "comment": "",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "H-LL-AC-L1.2",
+    "associated_outdoor_unit": "H-LL-CU-1.2",
+    "model_series": "FCA/RZA",
+    "location": "Comms Room",
+    "_section_id": "1.2.2",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-AC-L4.2",
+    "associated_outdoor_unit": "H-LL-CU-4.2",
+    "model_series": "FCA/RZA",
+    "location": "Comms Room",
+    "_section_id": "1.2.2",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "Zone Temperature Sensor",
+    "model_series": "Alerton TS-1050-BT",
+    "location": "Wall mounted",
+    "comment": "Thermistor (type II 10K)",
+    "_section_id": "1.2.3",
+    "_heading_path": [
+      "Points List (for each cassette unit)"
+    ]
+  }
+]

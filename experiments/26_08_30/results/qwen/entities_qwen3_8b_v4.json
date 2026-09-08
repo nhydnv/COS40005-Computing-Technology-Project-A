@@ -1,0 +1,234 @@
+[
+  {
+    "unit_id": "Daikin Gateway",
+    "location": "MSSB-L4 (Level 4 Mechanical Services Riser)",
+    "comment": "Gateway Device",
+    "_section_id": "1.1.2",
+    "_heading_path": [
+      "Gateway Devices"
+    ]
+  },
+  {
+    "unit_id": "Abakus Server",
+    "location": "Level 3 DDC Panel Location",
+    "comment": "Server",
+    "_section_id": "1.1.2",
+    "_heading_path": [
+      "Gateway Devices"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.W1",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.N1",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.N2",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.I1",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Student Lounge",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L1.I2",
+    "associated_outdoor_unit": "H-LL-CU-1.1",
+    "model_series": "FXMQ/REY",
+    "location": "Informal Seating",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.W1",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.N1",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.N3",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.I1",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.I2",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.P1",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-FCU-L2.P2",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-CU-3.1",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-CU-4.1",
+    "_section_id": "1.1.3",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "Daikin Gateway",
+    "location": "",
+    "comment": "Via Daikin Gateway",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Belimo 01DT-1LL",
+    "location": "Supply Air Temperature Sensor",
+    "comment": "10K Type II Duct Mounted Temperature Sensor (Belimo 01DT-1LL)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Belimo 22-RTM-19-1",
+    "location": "CO2 Sensor",
+    "comment": "0-10V Active Output Signal",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Modulating Damper Actuator",
+    "location": "Outside Air Damper Actuator",
+    "comment": "0-10V Modulating Damper Actuator",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Belimo 01UT-1L",
+    "location": "Outside Air Temperature",
+    "comment": "10 Type II Wall Mounted Outdoor Temperature Sensor (Mounted on H-LL-ERV-LR.1)",
+    "_section_id": "1.1.4",
+    "_heading_path": [
+      "Points List (for each VRV unit)"
+    ]
+  },
+  {
+    "unit_id": "Abakus Gateway",
+    "location": "",
+    "comment": "",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "Sensor In",
+    "location": "",
+    "comment": "",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "Sensor Out",
+    "location": "",
+    "comment": "",
+    "_section_id": "1.1.5",
+    "_heading_path": [
+      "Points List [People Counting System]"
+    ]
+  },
+  {
+    "unit_id": "H-LL-AC-L1.2",
+    "associated_outdoor_unit": "H-LL-CU-1.2",
+    "model_series": "FCA/RZA",
+    "location": "Comms Room",
+    "_section_id": "1.2.2",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "H-LL-AC-L4.2",
+    "associated_outdoor_unit": "H-LL-CU-4.2",
+    "model_series": "FCA/RZA",
+    "location": "Comms Room",
+    "_section_id": "1.2.2",
+    "_heading_path": [
+      "Controlled Equipment"
+    ]
+  },
+  {
+    "unit_id": "Zone Temperature Sensor",
+    "location": "",
+    "comment": "Wall mounted 10K type II Thermistor (Alerton TS-1050-BT)",
+    "_section_id": "1.2.3",
+    "_heading_path": [
+      "Points List (for each cassette unit)"
+    ]
+  }
+]
