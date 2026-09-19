@@ -1,0 +1,68 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/building#> .
+@prefix projctrl: <http://example.org/projctrl#> .
+
+ex:LinearComplianceShape a sh:NodeShape ;
+    sh:targetClass projctrl:LinearLogic ;
+    sh:sparql [
+        sh:message "Measured output deviates from the linear reset curve beyond tolerance." ;
+        sh:select """
+            PREFIX ctrl: <https://w3id.org/ibp/CTRLont#>
+            PREFIX projctrl: <http://example.org/projctrl#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+            SELECT $this WHERE {
+
+                $this ctrl:logicInput ?inputEl ;
+                    ctrl:logicOutput ?outputEl ;
+                    ctrl:logicParameter ?minSp, ?maxSp, ?minPos, ?maxPos, ?tolP .
+
+                ?minSp a projctrl:MinParameter ;
+                    projctrl:constrains ?inputEl ;
+                    rdf:value ?inMin .
+
+                ?maxSp a projctrl:MaxParameter ;
+                    projctrl:constrains ?inputEl ;
+                    rdf:value ?inMax .
+
+                ?minPos a projctrl:MinParameter ;
+                    projctrl:constrains ?outputEl ;
+                    rdf:value ?outMin .
+
+                ?maxPos a projctrl:MaxParameter ;
+                    projctrl:constrains ?outputEl ;
+                    rdf:value ?outMax .
+
+                ?tolP a projctrl:ToleranceParameter ;
+                    rdf:value ?tol .
+
+                ?inputEl sosa:hasSimpleResult ?x .
+                ?outputEl sosa:hasSimpleResult ?actual .
+
+                BIND(
+                    IF(
+                        ?x < ?inMin,
+                        ?inMin,
+                        IF(?x > ?inMax, ?inMax, ?x)
+                    )
+                    AS ?xClamped
+                )
+
+                BIND(
+                    (?outMax - ?outMin) / (?inMax - ?inMin)
+                    AS ?slope
+                )
+
+                BIND(
+                    ?outMin + ?slope * (?xClamped - ?inMin)
+                    AS ?expected
+                )
+
+                FILTER(
+                    ABS(?actual - ?expected) > ?tol
+                )
+            }
+        """ ;
+    ] .

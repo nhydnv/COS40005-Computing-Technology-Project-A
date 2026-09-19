@@ -1,0 +1,26 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix ex: <http://example.org/building#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# H-LL-FCU-L2.I1 is an FCU which feeds into the Student Work Zone
+# and has a CO2 Sensor point named H-LL-FCU-L2.I1_CO2.
+ex:H-LL-FCU-L2.I1 a brick:Fan_Coil_Unit ;
+    brick:feeds ex:Student_Work_Zone ;
+    brick:hasPoint ex:H-LL-FCU-L2.I1_CO2 ;
+    brick:hasPart ex:H-LL-FCU-L2.I1_Damper .
+
+# H-LL-FCU-L2.I1_CO2 is a CO2 Sensor, which controls the damper H-LL-FCU-L2.I1_Damper
+ex:H-LL-FCU-L2.I1_CO2 a brick:CO2_Level_Sensor ;
+    brick:isPointOf ex:H-LL-FCU-L2.I1 .
+
+# Damper H-LL-FCU-L2.I1_Damper is an outside air damper
+ex:H-LL-FCU-L2.I1_Damper a brick:Outside_Air_Damper ;
+    brick:isPartOf ex:H-LL-FCU-L2.I1 ;
+    brick:hasPoint ex:H-LL-FCU-L2.I1_Damper_PositionCommand .
+
+# Damper's position command
+ex:H-LL-FCU-L2.I1_Damper_PositionCommand a brick:Outside_Air_Damper_Position_Command ;
+    brick:isPointOf ex:H-LL-FCU-L2.I1_Damper .
+
+# The Student Work Zone is an HVAC Zone
+ex:Student_Work_Zone a brick:HVAC_Zone .

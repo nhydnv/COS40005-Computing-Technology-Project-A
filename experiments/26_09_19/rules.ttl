@@ -1,0 +1,61 @@
+@prefix ctrl: <https://w3id.org/ibp/CTRLont#> .
+@prefix ex: <http://example.org/building#> .
+@prefix projctrl: <http://example.org/projctrl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# The slope/intercept of the line through (600ppm, 40%) and (800ppm, 80%):
+# - slope = (80 − 40) / (800 − 600) = 0.2
+# - intercept: 40 = 0.2 × 600 + b -> b = −80
+# - expected position = 0.2 × CO2 − 80, clamped to [40, 80] outside the 600–800ppm range
+
+# --- Project extensions (not part of base CTRLont) ---
+
+projctrl:LinearLogic rdfs:subClassOf ctrl:ApplicationLogic ;
+    rdfs:comment "Custom extension: A proportional reset curve between an input and an output, bounded by parameters." .
+
+projctrl:MinParameter rdfs:subClassOf ctrl:Parameter .
+projctrl:MaxParameter rdfs:subClassOf ctrl:Parameter .
+projctrl:ToleranceParameter rdfs:subClassOf ctrl:Parameter .
+
+projctrl:constrains a rdf:Property ;
+    rdfs:comment "Project extension: links a Parameter to the Input or Output it bounds." .
+
+projctrl:correspondsToBrickPoint a rdf:Property ;
+    rdfs:comment "Project extension: bridges a ctrl:Input/Output to its corresponding Brick point." .
+
+# --- Control rules --- #
+
+# Define function input: CO2 point
+ex:CO2Input a ctrl:Input ;
+    ctrl:hasUnit ex:PPM ;
+    projctrl:correspondsToBrickPoint ex:H-LL-FCU-L2.I1_CO2 .  # bridge to Brick - not part of CTRLont, our own link
+
+# Define function output: Damper % position
+ex:DamperOutput a ctrl:Output ;
+    ctrl:hasUnit ex:Percent ;
+    projctrl:correspondsToBrickPoint ex:H-LL-FCU-L2.I1_Damper_PositionCommand .
+
+# Clamp
+ex:MinSetpoint a projctrl:MinParameter ; 
+    projctrl:constrains ex:CO2Input ;
+    rdf:value "600"^^xsd:float .
+ex:MaxSetpoint a projctrl:MaxParameter ; 
+    projctrl:constrains ex:CO2Input ;
+    rdf:value "800"^^xsd:float .
+ex:MinPosition a projctrl:MinParameter ; 
+    projctrl:constrains ex:DamperOutput ;
+    rdf:value "40"^^xsd:float .
+ex:MaxPosition a projctrl:MaxParameter ; 
+    projctrl:constrains ex:DamperOutput ;
+    rdf:value "80"^^xsd:float .
+ex:Tolerance a projctrl:ToleranceParameter; 
+    ctrl:hasUnit ex:Percent ;
+    rdf:value "5"^^xsd:float .
+
+# Define the rule itself
+ex:DamperResetLogic a projctrl:LinearLogic ;
+    ctrl:logicInput ex:CO2Input ;
+    ctrl:logicOutput ex:DamperOutput ;
+    ctrl:logicParameter ex:MinSetpoint, ex:MaxSetpoint, ex:MinPosition, ex:MaxPosition, ex:Tolerance .

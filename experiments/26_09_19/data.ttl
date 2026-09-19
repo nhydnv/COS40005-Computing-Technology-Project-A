@@ -1,0 +1,15 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix ex: <http://example.org/building#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:CO2Input a sosa:Observation ;
+    sosa:observedProperty ex:H-LL-FCU-L2.I1_CO2 ;
+    sosa:hasSimpleResult "911.99"^^xsd:float ;
+    sosa:resultTime "2026-12-05T13:05:00Z"^^xsd:dateTime .
+
+ex:DamperOutput a sosa:Observation ;
+    sosa:observedProperty ex:H-LL-FCU-L2.I1_Damper_PositionCommand ;
+    sosa:hasSimpleResult "40"^^xsd:float ;
+    sosa:resultTime "2026-12-05T13:05:00Z"^^xsd:dateTime .
