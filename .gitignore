@@ -15,6 +15,7 @@ test.ttl
 notes.txt
 main.pdf
 tmp/
+project/
 
 .venv/
 .env
